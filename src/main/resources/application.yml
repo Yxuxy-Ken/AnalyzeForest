@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Analyze_Forest
+  profiles:
+    active: dev
