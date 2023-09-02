@@ -1,12 +1,14 @@
 package com.ken.analyze_forest.model.dto;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import jakarta.validation.constraints.Size;
 import lombok.Data;
 
-import java.io.Serial;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 
+/**
+ * @author Ken
+ */
 @Data
 public class DeviceAddRequest implements Serializable {
 
@@ -21,7 +23,6 @@ public class DeviceAddRequest implements Serializable {
 
     private Integer DR;
 
-    @Serial
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

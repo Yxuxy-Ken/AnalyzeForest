@@ -12,17 +12,17 @@ public class ResultUtils {
 
     public static BaseResponse error(ErrorCode errorCode)
     {
-        return new BaseResponse<>(errorCode);
+        return new BaseResponse(errorCode);
     }
 
     public static BaseResponse error(int Code,String Message)
     {
-        return new BaseResponse<>(Code,null,Message);
+        return new BaseResponse(Code,null,Message);
     }
 
     public static BaseResponse error(ErrorCode errorCode,String Message)
     {
-        return new BaseResponse<>(errorCode.getCode(),null,Message);
+        return new BaseResponse(errorCode.getCode(),null,Message);
     }
 
 
