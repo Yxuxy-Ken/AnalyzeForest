@@ -11,7 +11,6 @@ import java.io.Serializable;
  * @param <T>
  */
 @Data
-@AllArgsConstructor
 public class BaseResponse<T> implements Serializable {
 
     private int Code;
@@ -20,8 +19,16 @@ public class BaseResponse<T> implements Serializable {
 
     private String Message;
 
-    public BaseResponse(int Code, T Data){
-        this(Code,Data,"");
+    public BaseResponse(int code, T data, String message) {
+        Code = code;
+        Data = data;
+        Message = message;
+    }
+
+    public BaseResponse(int code, T data){
+        Code = code;
+        Data = data;
+        Message = "";
     }
 
     public BaseResponse(ErrorCode errorCode) {
