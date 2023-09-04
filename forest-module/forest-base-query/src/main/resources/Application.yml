@@ -1,11 +1,11 @@
 spring:
   application:
     name: Analyze_Forest
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/local_test
-    username: root
-    password: cc17715
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/local_test
+#    username: root
+#    password: cc17715
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher

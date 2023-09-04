@@ -1,7 +1,6 @@
 package com.ken.base.baseResponse;
 
 import com.ken.base.emuns.Code;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NonNull;
 
@@ -20,6 +19,14 @@ public class Result<T> {
 
     private long timestamp = System.currentTimeMillis();
 
+    public Result(int code, String msg, T data, String path, long timestamp) {
+        this.code = code;
+        this.msg = msg;
+        this.data = data;
+        this.path = path;
+        this.timestamp = timestamp;
+    }
+
     public Result(int code, String msg, T data) {
         this.code = code;
         this.msg = msg;
@@ -36,7 +43,7 @@ public class Result<T> {
     {
         //这里二重验证其实不是很有必要
         Objects.requireNonNull(data);
-        return new Result<>(Code.SUCCESS.getCode(),Code.SUCCESS.getMsg(), data);
+        return new Result<>(Code.SUCCESS.getCode(), Code.SUCCESS.getMsg(), data);
     }
 
     /**
@@ -48,7 +55,7 @@ public class Result<T> {
      */
     public static <T> Result<T> error(String msg)
     {
-        return new Result<>(Code.ERROR.getCode(), msg,null);
+        return new Result<>(Code.ERROR.getCode(), msg,null,null,1123);
     }
 
 
