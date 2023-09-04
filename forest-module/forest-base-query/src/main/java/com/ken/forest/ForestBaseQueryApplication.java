@@ -1,13 +1,11 @@
-package com.ken.analyze_forest;
+package com.ken.forest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AnalyzeForestApplication {
-
+public class ForestBaseQueryApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AnalyzeForestApplication.class, args);
+        SpringApplication.run(ForestBaseQueryApplication.class);
     }
-
 }

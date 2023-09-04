@@ -15,10 +15,10 @@
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
+        <module>forest-common</module>
         <module>forest-module</module>
     </modules>
     <name>Analyze_Forest</name>
-    <description>Analyze_Forest</description>
 
     <properties>
         <java.version>8</java.version>
@@ -71,7 +71,6 @@
             <version>1.18.24</version>
             <scope>provided</scope>
         </dependency>
-
 
     </dependencies>
 
