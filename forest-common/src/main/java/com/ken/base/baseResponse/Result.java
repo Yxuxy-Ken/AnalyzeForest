@@ -1,12 +1,14 @@
 package com.ken.base.baseResponse;
 
 import com.ken.base.emuns.Code;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NonNull;
 
 import java.util.Objects;
 
 @Data
+@AllArgsConstructor
 public class Result<T> {
 
     private int code;
@@ -18,14 +20,6 @@ public class Result<T> {
     private String path;
 
     private long timestamp = System.currentTimeMillis();
-
-    public Result(int code, String msg, T data, String path, long timestamp) {
-        this.code = code;
-        this.msg = msg;
-        this.data = data;
-        this.path = path;
-        this.timestamp = timestamp;
-    }
 
     public Result(int code, String msg, T data) {
         this.code = code;
@@ -55,7 +49,7 @@ public class Result<T> {
      */
     public static <T> Result<T> error(String msg)
     {
-        return new Result<>(Code.ERROR.getCode(), msg,null,null,1123);
+        return new Result<>(Code.ERROR.getCode(), msg, null);
     }
 
 

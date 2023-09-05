@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: Analyze_Forest
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5 #初始化连接数量
+      min-idle: 5 #最小连接数量
+      max-active: 20 #最大连接池数量
+      max-wait: 6000 #最大等待数量
+      local-mysql:
+        name: local-mysql
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/local_test
+        username: root
+        password: cc17715
+      test-sqlserver:
+        name: test-sqlserver
+        driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        url: jdbc:sqlserver://10.182.2.23/IRAAPMOM
+        username: sa
+        password: irap!60068
+      online-sqlserver:
+        name: online-sqlserver
+        driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        url: jdbc:sqlserver://10.182.2.12/IRAAPMOM
+        username: sa
+        password: ft@123
+      online-backup-sqlserver:
+        name: online-backup-sqlserver
+        driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        url: jdbc:sqlserver://10.182.2.14/IRAAPMOM
+        username: sa
+        password: ft@123
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api

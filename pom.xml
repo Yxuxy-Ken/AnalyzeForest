@@ -25,6 +25,9 @@
         <spring-boot.version>2.7.15</spring-boot.version>
         <mybatis-plus.version>3.5.2</mybatis-plus.version>
         <mysql.version>8.0.28</mysql.version>
+        <sqlserver.version>9.4.0.jre8</sqlserver.version>
+        <spring-druid.version>1.2.15</spring-druid.version>
+        <lombok.version>1.18.24</lombok.version>
     </properties>
 
     <dependencies>
@@ -63,12 +66,26 @@
             <version>${mysql.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>${sqlserver.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${spring-druid.version}</version>
+        </dependency>
+
+
         <!-- Dev Tools -->
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
 
