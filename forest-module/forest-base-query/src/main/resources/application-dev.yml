@@ -8,7 +8,8 @@ spring:
     password: cc17715
 mybatis-plus:
   configuration:
-    map-underscore-to-camel-case: false
+    #使用驼峰映射,防止以后忘记，这里还是记录一下好了： UserName = user_name user_name = user_name username = username
+    map-underscore-to-camel-case: true
 server:
   servlet:
     context-path: /api

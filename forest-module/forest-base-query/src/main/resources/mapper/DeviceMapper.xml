@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ken.forest.mapper.DeviceMapper">
 
-    <resultMap id="w" type="com.ken.forest.model.entity.Device">
+    <resultMap id="DeviceResult" type="com.ken.forest.model.entity.Device">
         <result property="id" column="ID" jdbcType="INTEGER"/>
         <result property="deviceName" column="Device_Name" jdbcType="VARCHAR"/>
         <result property="treeid" column="TREEID" jdbcType="VARCHAR"/>

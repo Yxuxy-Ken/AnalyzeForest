@@ -18,7 +18,6 @@ public class TestLocalConnectController {
 
     @GetMapping("/getTree")
     public Device adm() {
-        System.out.println("123");
         return getTreeService.getById(1);
     }
 

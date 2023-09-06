@@ -14,11 +14,10 @@ public class Device implements Serializable {
     @TableId(type = IdType.AUTO)
     private Integer id;
 
-    private String deviceName;
+    private String devicename;
 
     private String treeid;
 
-    private String entityId;
+    private String entityid;
 
-    private Integer dr;
 }
