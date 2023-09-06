@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: new_pro
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/local_test
+    username: root
+    password: cc17715
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+server:
+  servlet:
+    context-path: /api
+  port: 8080

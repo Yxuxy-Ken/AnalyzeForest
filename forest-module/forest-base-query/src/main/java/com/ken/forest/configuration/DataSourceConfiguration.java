@@ -8,7 +8,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 
 import javax.sql.DataSource;
 
-@Configuration
+//@Configuration
 public class DataSourceConfiguration {
 
     @Bean(name = "local-mysql")
