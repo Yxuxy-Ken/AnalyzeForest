@@ -10,4 +10,8 @@
         <result property="dr" column="DR" jdbcType="INTEGER"/>
     </resultMap>
 
+    <update id="SPCdelete">
+
+    </update>
+
 </mapper>
