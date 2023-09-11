@@ -1,5 +1,7 @@
 package com.ken.forest.configuration;
 
+import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
+import com.alibaba.druid.support.profile.ProfileEntry;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -8,7 +10,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 
 import javax.sql.DataSource;
 
-//@Configuration
+@Configuration
 public class DataSourceConfiguration {
 
     @Bean(name = "local-mysql")

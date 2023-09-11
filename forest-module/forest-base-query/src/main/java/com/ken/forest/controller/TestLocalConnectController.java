@@ -1,6 +1,8 @@
 package com.ken.forest.controller;
 
+import com.ken.forest.model.entity.BackTest;
 import com.ken.forest.model.entity.Device;
+import com.ken.forest.service.GetDataService;
 import com.ken.forest.service.GetTreeService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,5 +34,14 @@ public class TestLocalConnectController {
 
         return getTreeService.getById(id);
     }
+
+    @Resource
+    private GetDataService getDataService;
+
+    @GetMapping("/getData")
+    public BackTest aaa(String sn) throws Exception {
+        return getDataService.doSomeThing();
+    }
+
 
 }
