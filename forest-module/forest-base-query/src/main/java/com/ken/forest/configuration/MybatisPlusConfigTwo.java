@@ -21,7 +21,7 @@ public class MybatisPlusConfigTwo {
     private DataSource dataSource;
 
     //@Bean annotation is used to indicate that the class is a bean and should be created
-    @Bean
+    @Bean("sqlSessionFactory2")
     public SqlSessionFactory SqlSessionFactory() throws Exception {
         //SqlSessionFactoryBean is a bean definition that defines the configuration of a SqlSessionFactory
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
@@ -32,7 +32,7 @@ public class MybatisPlusConfigTwo {
     }
 
     //@Bean annotation is used to indicate that the class is a bean and should be created
-    @Bean
+    @Bean("backUpSqlServerSqlSessionTemplate")
     public SqlSessionTemplate SqlSessionTemplate() throws Exception {
         //SqlSessionTemplate is a bean definition that defines the configuration of a SqlSessionTemplate
         return new SqlSessionTemplate(SqlSessionFactory());

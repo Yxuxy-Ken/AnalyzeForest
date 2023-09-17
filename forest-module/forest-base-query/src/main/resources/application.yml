@@ -20,6 +20,7 @@ spring:
       test-sqlserver:
         name: test-sqlserver
         driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        jdbc-url: jdbc:sqlserver://10.182.2.23/IRAAPMOM
         url: jdbc:sqlserver://10.182.2.23/IRAAPMOM
         username: sa
         password: irap!60068

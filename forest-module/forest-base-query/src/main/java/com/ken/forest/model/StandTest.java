@@ -1,4 +1,4 @@
 package com.ken.forest.model;
 
-public class stand {
+public class StandTest {
 }
